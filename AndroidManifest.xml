@@ -54,7 +54,10 @@
         <activity android:name=".MapsActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".HighScoresActivity" />
-        <activity android:name=".InstructionsActivity"></activity>
+        <activity android:name=".InstructionsActivity" />
+        <activity android:name=".StartGameOptionsActivity"></activity>
+        <activity android:name=".PlayActivity" />
+        <activity android:name=".WordFormActivity" />
     </application>
 
 </manifest>

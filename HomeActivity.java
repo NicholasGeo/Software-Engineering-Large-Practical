@@ -19,13 +19,19 @@ public class HomeActivity extends AppCompatActivity {
         btnHighScore = (Button) findViewById(R.id.btHighScores);
         btnExit = (Button) findViewById(R.id.btExit);
 
-        btnPlay.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-
-                /// Create Intent for SignUpActivity  abd Start The Activity
-                Intent intentSignUP = new Intent(getApplicationContext(), MapsActivity.class);
-                startActivity(intentSignUP);
+//        btnPlay.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                // TODO Auto-generated method stub
+//
+//                /// Create Intent for SignUpActivity  abd Start The Activity
+//                Intent intentPlayActivity = new Intent(getApplicationContext(), PlayActivity.class);
+//                startActivity(intentPlayActivity);
+//            }
+//        });
+        btnPlay.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent intentPlayActivity = new Intent(getApplicationContext(), StartGameOptionsActivity.class);
+                startActivity(intentPlayActivity);
             }
         });
         btnInstructions.setOnClickListener(new View.OnClickListener() {
