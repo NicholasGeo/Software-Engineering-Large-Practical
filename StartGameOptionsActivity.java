@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class StartGameOptionsActivity extends AppCompatActivity {
 
-    Button btnPlayGame,btnWordForm;
+    Button btnPlayGame,btnWordForm, btnDistancePath, btnBack, btnExit;
 
 
     @Override
@@ -18,6 +18,7 @@ public class StartGameOptionsActivity extends AppCompatActivity {
 
         btnPlayGame = (Button) findViewById(R.id.btPlayGame);
         btnWordForm = (Button) findViewById(R.id.btWordForm);
+        btnDistancePath = (Button) findViewById(R.id.btDistancePath);
 
 
         btnPlayGame.setOnClickListener(new View.OnClickListener(){
@@ -33,14 +34,35 @@ public class StartGameOptionsActivity extends AppCompatActivity {
             }
         });
 
-//        btnWordForm.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View v) {
-//                // TODO Auto-generated method stub
-//
-//                /// Create Intent for SignUpActivity  abd Start The Activity
-//                Intent intentInstructions=new Intent(getApplicationContext(),WordFormActivity.class);
-//                startActivity(intentInstructions);
-//            }
-//        });
+        btnDistancePath.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+
+                /// Create Intent for SignUpActivity  abd Start The Activity
+                Intent intentDistancePath=new Intent(getApplicationContext(),StepsActivity.class);
+                startActivity(intentDistancePath);
+            }
+        });
+
+        btnBack = (Button) findViewById(R.id.btBackStart);
+        btnExit = (Button) findViewById(R.id.btExitStart);
+
+        btnBack.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent intentBack = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intentBack);
+            }
+        });
+        btnExit.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+
+                /// Create Intent for SignUpActivity  abd Start The Activity
+                Intent homeIntent = new Intent(Intent.ACTION_MAIN);
+                homeIntent.addCategory( Intent.CATEGORY_HOME );
+                homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(homeIntent);
+            }
+        });
     }
 }

@@ -8,50 +8,98 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.nicholas.grabble.PlayActivity">
+    tools:context="com.example.nicholas.grabble.StartGameOptionsActivity">
 
-    <Button
+    <TextView
+        android:text="See How Many Steps You've Taken Since Starting to Play"
+        android:textSize="20dp"
+        android:gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btWordForm"
-        android:layout_alignParentBottom="true"
+        android:layout_marginTop="90dp"
+        android:id="@+id/textView5"
+        android:layout_alignTop="@+id/btWordForm"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="SHOW ME HOW MANY STEPS I'VE TAKEN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btDistancePath"
+        android:layout_below="@+id/textView5"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="160dp"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:text="FORM WORDS and VIEW COLLECTED LETTERS" />
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Start Collecting Letters"
+        android:textSize="20dp"
+        android:gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:id="@+id/textView3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:text="LAUNCH MAP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btPlayGame"
-        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textView3"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="65dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
     <TextView
-        android:text="Begin Playing Grabble!"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="36dp"
-        android:id="@+id/textView3" />
-
-    <TextView
         android:text="Start Forming Some Words and Collect Points"
+        android:gravity="center_horizontal"
+        android:textSize="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/btWordForm"
+        android:id="@+id/textView4"
+        android:layout_above="@+id/textView5"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="49dp"
-        android:id="@+id/textView4" />
+        android:layout_marginBottom="14dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btWordForm"
+        android:text="FORM WORDS AND VIEW COLLECTED LETTERS"
+        android:layout_marginTop="81dp"
+        android:layout_below="@+id/btPlayGame"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="BACK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/btBackStart" />
+
+    <Button
+        android:text="EXIT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/btExitStart" />
+
 </RelativeLayout>
 

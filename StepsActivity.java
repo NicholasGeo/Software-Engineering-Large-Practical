@@ -6,16 +6,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class WordFormActivity extends AppCompatActivity {
+public class StepsActivity extends AppCompatActivity {
 
-    //private Button btnBack, btnExit;
+    private Button btnBack, btnExit;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_word_form);
+        setContentView(R.layout.activity_steps);
 
-//        btnBack = (Button) findViewById(R.id.btBackInstr);
+//        btnBack = (Button) findViewById(R.id.btBackSteps);
 //        btnExit = (Button) findViewById(R.id.btExitInstr);
 //
 //        btnBack.setOnClickListener(new View.OnClickListener(){
@@ -36,6 +37,6 @@ public class WordFormActivity extends AppCompatActivity {
 //            }
 //        });
 
-        //TODO calculate scores, insert current letters from map
+
     }
 }
