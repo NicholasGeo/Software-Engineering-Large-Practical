@@ -1,92 +1,68 @@
 package com.example.nicholas.grabble;
 
-        import android.app.Activity;
-        import android.app.Dialog;
-        import android.content.Intent;
-        import android.os.Bundle;
-        import android.view.View;
-        import android.widget.Button;
-        import android.widget.EditText;
-        import android.widget.Toast;
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
+public class MainActivity extends AppCompatActivity {
 
-
-public class MainActivity extends Activity
-{
-    Button btnSignIn,btnSignUp;
-    LoginDataBaseAdapter loginDataBaseAdapter;
-
+    Button btnPlay,btnInstructions,btnAchievements,btnExit;
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // create a instance of SQLite Database
-        loginDataBaseAdapter=new LoginDataBaseAdapter(this);
-        loginDataBaseAdapter=loginDataBaseAdapter.open();
+        btnPlay = (Button) findViewById(R.id.btPlay);
+        btnInstructions = (Button) findViewById(R.id.btnInstruction);
+        btnAchievements = (Button) findViewById(R.id.btAchievements);
+        btnExit = (Button) findViewById(R.id.btExitAchiev);
 
-        // Get The Refference Of Buttons
-        btnSignIn=(Button)findViewById(R.id.buttonSignIN);
-        btnSignUp=(Button)findViewById(R.id.buttonSignUP);
-
-        // Set OnClick Listener on SignUp button
-        btnSignUp.setOnClickListener(new View.OnClickListener() {
+//        btnPlay.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                // TODO Auto-generated method stub
+//
+//                /// Create Intent for SignUpActivity  abd Start The Activity
+//                Intent intentPlayActivity = new Intent(getApplicationContext(), PlayActivity.class);
+//                startActivity(intentPlayActivity);
+//            }
+//        });
+        btnPlay.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent intentPlayActivity = new Intent(getApplicationContext(), StartGameOptionsActivity.class);
+                startActivity(intentPlayActivity);
+            }
+        });
+        btnInstructions.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
 
                 /// Create Intent for SignUpActivity  abd Start The Activity
-                Intent intentSignUP=new Intent(getApplicationContext(),RegisterActivity.class);
-                startActivity(intentSignUP);
+                Intent intentInstructions=new Intent(getApplicationContext(),InstructionsActivity.class);
+                startActivity(intentInstructions);
             }
         });
-    }
-    // Methos to handleClick Event of Sign In Button
-    public void signIn(View V)
-    {
-        final Dialog dialog = new Dialog(MainActivity.this);
-        dialog.setContentView(R.layout.login);
-        dialog.setTitle("Login");
-
-        // get the Refferences of views
-        final  EditText editTextUserName=(EditText)dialog.findViewById(R.id.editTextUserNameToLogin);
-        final  EditText editTextPassword=(EditText)dialog.findViewById(R.id.editTextPasswordToLogin);
-
-        Button btnSignIn=(Button)dialog.findViewById(R.id.buttonSignIn);
-
-        // Set On ClickListener
-        btnSignIn.setOnClickListener(new View.OnClickListener() {
-
+        btnAchievements.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // get The User name and Password
-                String userName=editTextUserName.getText().toString();
-                String password=editTextPassword.getText().toString();
+                // TODO Auto-generated method stub
 
-                // fetch the Password form database for respective user name
-                String storedPassword=loginDataBaseAdapter.getSinlgeEntry(userName);
+                /// Create Intent for SignUpActivity  abd Start The Activity
+                Intent intentHighScore=new Intent(getApplicationContext(),AchievementsActivity.class);
+                startActivity(intentHighScore);
+            }
+        });
+        btnExit.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
 
-                // check if the Stored password matches with  Password entered by user
-                if(password.equals(storedPassword))
-                {
-                    Toast.makeText(MainActivity.this, "Congrats: Login Successfull", Toast.LENGTH_LONG).show();
-                    dialog.dismiss();
-                   Intent intentHomeAct=new Intent(getApplicationContext(),HomeActivity.class);
-                    startActivity(intentHomeAct);
-                }
-                else
-                {
-                    Toast.makeText(MainActivity.this, "User Name or Password does not match", Toast.LENGTH_LONG).show();
-                }
+                /// Create Intent for SignUpActivity  abd Start The Activity
+                Intent homeIntent = new Intent(Intent.ACTION_MAIN);
+                homeIntent.addCategory( Intent.CATEGORY_HOME );
+                homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(homeIntent);
             }
         });
 
-        dialog.show();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        // Close The Database
-        loginDataBaseAdapter.close();
     }
 }

@@ -16,7 +16,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="GRABBLE"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
@@ -42,22 +42,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- Add Other activities like this -->
-        <activity android:name=".RegisterActivity">
 
-            <!-- Default Intent Filter -->
-            <intent-filter>
-                <action android:name="android.intent.action.DEFAULT" />
-            </intent-filter>
-        </activity>
+        <!-- Add Other activities like this -->
         <!-- OR Other activities like this And  intent filter is not necessary in other activites -->
         <activity android:name=".MapsActivity" />
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".HighScoresActivity" />
+        <activity android:name=".AchievementsActivity" />
         <activity android:name=".InstructionsActivity" />
-        <activity android:name=".StartGameOptionsActivity"></activity>
-        <activity android:name=".PlayActivity" />
+        <activity android:name=".StartGameOptionsActivity" />
         <activity android:name=".WordFormActivity" />
+        <activity android:name=".StepsActivity"></activity>
     </application>
 
 </manifest>
