@@ -13,10 +13,12 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
+    <uses-feature android:name="android.hardware.sensor.stepcounter" />
+    <uses-feature android:name="android.hardware.sensor.stepdetector" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="GRABBLE"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
@@ -50,7 +52,12 @@
         <activity android:name=".InstructionsActivity" />
         <activity android:name=".StartGameOptionsActivity" />
         <activity android:name=".WordFormActivity" />
-        <activity android:name=".StepsActivity"></activity>
+        <activity android:name=".StepsActivity" />
+        <activity android:name=".StepCounterActivity"></activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>

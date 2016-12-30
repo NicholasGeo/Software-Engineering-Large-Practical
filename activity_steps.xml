@@ -59,6 +59,8 @@
 
     <Button
         android:text="Exit"
+        android:textColor="#FFFFFF"
+        android:background="#66B2ff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/btBackSteps"
@@ -68,6 +70,8 @@
 
     <Button
         android:text="Back"
+        android:textColor="#FFFFFF"
+        android:background="#66B2ff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="288dp"

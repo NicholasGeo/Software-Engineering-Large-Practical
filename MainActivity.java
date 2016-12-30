@@ -1,14 +1,33 @@
 package com.example.nicholas.grabble;
 
 import android.content.Intent;
+import android.content.res.Resources;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.appindexing.Thing;
+import com.google.android.gms.common.api.GoogleApiClient;
+
+import org.xmlpull.v1.XmlPullParserException;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnPlay,btnInstructions,btnAchievements,btnExit;
+
+    Button btnPlay, btnInstructions, btnAchievements, btnExit;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
 //                startActivity(intentPlayActivity);
 //            }
 //        });
-        btnPlay.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
+        btnPlay.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
                 Intent intentPlayActivity = new Intent(getApplicationContext(), StartGameOptionsActivity.class);
                 startActivity(intentPlayActivity);
             }
@@ -39,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 // TODO Auto-generated method stub
 
                 /// Create Intent for SignUpActivity  abd Start The Activity
-                Intent intentInstructions=new Intent(getApplicationContext(),InstructionsActivity.class);
+                Intent intentInstructions = new Intent(getApplicationContext(), InstructionsActivity.class);
                 startActivity(intentInstructions);
             }
         });
@@ -48,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 // TODO Auto-generated method stub
 
                 /// Create Intent for SignUpActivity  abd Start The Activity
-                Intent intentHighScore=new Intent(getApplicationContext(),AchievementsActivity.class);
+                Intent intentHighScore = new Intent(getApplicationContext(), AchievementsActivity.class);
                 startActivity(intentHighScore);
             }
         });
@@ -58,11 +77,60 @@ public class MainActivity extends AppCompatActivity {
 
                 /// Create Intent for SignUpActivity  abd Start The Activity
                 Intent homeIntent = new Intent(Intent.ACTION_MAIN);
-                homeIntent.addCategory( Intent.CATEGORY_HOME );
+                homeIntent.addCategory(Intent.CATEGORY_HOME);
                 homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(homeIntent);
             }
         });
 
+
+
+//        InputStream is = getResources().openRawResource(R.raw.dictionary);
+//        BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+//        String word = null;
+//        try {
+//            word = reader.readLine();
+//        } catch (IOException e1) {
+//            e1.printStackTrace();
+//        }
+//        while (word != null) {
+//            Dictionary.add(word);
+//            try {
+//                word = reader.readLine();
+//            } catch (IOException e1) {
+//                e1.printStackTrace();
+//            }
+//        }
+//        try {
+//            reader.close();
+//        } catch (IOException e1) {
+//            e1.printStackTrace();
+//        }
+//        try {
+//            is.close();
+//        } catch (IOException e1) {
+//            e1.printStackTrace();
+//        }
+
+
     }
+
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    public Action getIndexApiAction() {
+        Thing object = new Thing.Builder()
+                .setName("Main Page") // TODO: Define a title for the content shown.
+                // TODO: Make sure this auto-generated URL is correct.
+                .setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
+                .build();
+        return new Action.Builder(Action.TYPE_VIEW)
+                .setObject(object)
+                .setActionStatus(Action.STATUS_TYPE_COMPLETED)
+                .build();
+    }
+
+
+
 }

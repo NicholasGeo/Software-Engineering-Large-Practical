@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class StepsActivity extends Activity implements SensorEventListener {
+public class StepCounterActivity extends Activity implements SensorEventListener {
 
     private SensorManager sensorManager;
     private TextView count;
@@ -16,8 +16,9 @@ public class StepsActivity extends Activity implements SensorEventListener {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_steps);
-        count = (TextView) findViewById(R.id.tvSteps);
+        setContentView(R.layout.activity_step_counter);
+        count = (TextView) findViewById(R.id.count);
+
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
     }
 
@@ -27,7 +28,7 @@ public class StepsActivity extends Activity implements SensorEventListener {
         activityRunning = true;
         Sensor countSensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
         if (countSensor != null) {
-            sensorManager.registerListener(this, countSensor, SensorManager.SENSOR_DELAY_FASTEST);
+            sensorManager.registerListener(this, countSensor, SensorManager.SENSOR_DELAY_UI);
         } else {
             Toast.makeText(this, "Count sensor not available!", Toast.LENGTH_LONG).show();
         }

@@ -13,6 +13,8 @@
 
     <Button
         android:text="INSTRUCTIONS"
+        android:textColor="#FFFFFF"
+        android:background="#66B2ff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnInstruction"
@@ -25,6 +27,8 @@
 
     <Button
         android:text="PLAY"
+        android:textColor="#FFFFFF"
+        android:background="#66B2ff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btPlay"
@@ -37,6 +41,8 @@
 
     <Button
         android:text="Exit"
+        android:textColor="#FFFFFF"
+        android:background="#66B2ff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btExitAchiev"
@@ -48,6 +54,8 @@
 
     <Button
         android:text="ACHIEVEMENTS"
+        android:textColor="#FFFFFF"
+        android:background="#66B2ff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btAchievements"
@@ -67,9 +75,11 @@
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:text="Welcome to Grabble. Please Choose on one of the following options. Best of Luck!"
+        android:text="Welcome to Grabble. Please choose one of the following options. Best of Luck!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:gravity="center_horizontal"
         android:layout_marginTop="10dp"
         android:id="@+id/tvWelcome"
         android:layout_below="@+id/imageView"
