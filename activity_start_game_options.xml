@@ -24,6 +24,8 @@
 
     <Button
         android:text="SHOW ME HOW MANY STEPS I'VE TAKEN"
+        android:textColor="#FFFFFF"
+        android:background="#66B2ff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btDistancePath"
@@ -49,6 +51,8 @@
 
     <Button
         android:text="LAUNCH MAP"
+        android:textColor="#FFFFFF"
+        android:background="#66B2ff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btPlayGame"
@@ -74,6 +78,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:background="#66B2ff"
         android:id="@+id/btWordForm"
         android:text="FORM WORDS AND VIEW COLLECTED LETTERS"
         android:layout_marginTop="81dp"
@@ -85,6 +91,8 @@
 
     <Button
         android:text="BACK"
+        android:textColor="#FFFFFF"
+        android:background="#66B2ff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -94,6 +102,8 @@
 
     <Button
         android:text="EXIT"
+        android:textColor="#FFFFFF"
+        android:background="#66B2ff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

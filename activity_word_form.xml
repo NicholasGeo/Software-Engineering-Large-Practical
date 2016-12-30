@@ -24,6 +24,8 @@
 
     <Button
         android:text="Submit"
+        android:textColor="#FFFFFF"
+        android:background="#66B2ff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/etSevenLWord"
@@ -57,33 +59,12 @@
         android:layout_alignRight="@+id/tvScore"
         android:layout_alignEnd="@+id/tvScore" />
 
-    <TextView
-        android:text="A A A G H H J W T A C S F G D G G H W E F S C G H H W Q Q"
-        android:gravity="center_horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvLettersCollected"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="31dp"
-        android:id="@+id/textView8" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/etSevenLWord"
-        android:hint="Enter Seven Letter Word Here"
-        android:layout_below="@+id/textView8"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="133dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
 
     <Button
         android:text="Back"
+        android:textColor="#FFFFFF"
+        android:background="#66B2ff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -93,6 +74,8 @@
 
     <Button
         android:text="Exit"
+        android:textColor="#FFFFFF"
+        android:background="#66B2ff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/btBack"
@@ -118,5 +101,47 @@
         android:layout_alignStart="@+id/tvBestScore"
         android:id="@+id/tvPersonalBest"
         android:layout_alignTop="@+id/tvScoreDisplay" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/etSevenLWord"
+        android:hint="Enter Seven Letter Word Here"
+        android:layout_above="@+id/btBack"
+        android:layout_marginBottom="148dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLettersCollected"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView8"
+        android:layout_above="@+id/btSubmitWord"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_above="@+id/etSevenLWord"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--&gt;-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical"-->
+            <!--android:id="@+id/svlettersCollected"/>-->
+    <!--</ScrollView>-->
+
 
 </RelativeLayout>

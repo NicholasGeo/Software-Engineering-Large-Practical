@@ -35,6 +35,8 @@
 
     <Button
         android:text="BACK"
+        android:textColor="#FFFFFF"
+        android:background="#66B2ff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -44,6 +46,8 @@
 
     <Button
         android:text="EXIT"
+        android:textColor="#FFFFFF"
+        android:background="#66B2ff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btExitInstr"
